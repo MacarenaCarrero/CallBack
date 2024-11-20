@@ -57,3 +57,14 @@ const addNumbers = (numbers) => {
 };
 
 addNumbers([2, 40, 32, 1, 50, 2, 3, 4, 2, 12]);
+
+//Crea una función que reciba un array de 10 números, imprime por consola cada número, su cuadrado y su cubo en este formato:
+//"Número: 2 - Cuadrado: 4 - Cubo: 8".
+
+const squareAndCubed = (numbers) => {
+  const square = numbers.map((number) => number * number);
+  const cubed = numbers.map((number) => number * number * number);
+  console.log(`Número: ${number}-Cuadrado: ${square} -Cubo: ${cubed}`);
+};
+
+squareAndCubed([2, 40, 32, 1, 50, 2, 3, 4, 2, 12]);

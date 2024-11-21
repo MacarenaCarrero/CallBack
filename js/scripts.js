@@ -62,9 +62,25 @@ addNumbers([2, 40, 32, 1, 50, 2, 3, 4, 2, 12]);
 //"Número: 2 - Cuadrado: 4 - Cubo: 8".
 
 const squareAndCubed = (numbers) => {
-  const square = numbers.map((number) => number * number);
-  const cubed = numbers.map((number) => number * number * number);
-  console.log(`Número: ${number}-Cuadrado: ${square} -Cubo: ${cubed}`);
+  numbers.forEach((number) => {
+    console.log(
+      `Número:${number} -Cuadrado: ${Math.pow(number, 2)} -Cubo ${Math.pow(
+        number,
+        3
+      )}`
+    );
+  });
 };
 
 squareAndCubed([2, 40, 32, 1, 50, 2, 3, 4, 2, 12]);
+
+//- Crea una función que reciba una palabra e imprima por consola esa palabra pero con las vocales en mayúscula.
+
+//- Crea una función que reciba un array de 10 números y te diga si alguno es mayor de 5.
+
+const numberGreater = (numbers) => {
+  const compare = numbers.some((number) => number > 5);
+  console.log(compare);
+};
+
+numberGreater([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
